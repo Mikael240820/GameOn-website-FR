@@ -188,6 +188,30 @@ main {
   margin: 15px auto;
 }
 
+.modal-body.hide {
+  display: none !important;
+}
+
+.modal-centered {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 75vh;
+}
+
+.centered-title {
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+    max-width: 280px;
+}
+
+.modal-centered .button {
+  position: absolute;
+  bottom: 0;
+}
+
 label {
   font-family: var(--font-default);
   font-size: 17px;
@@ -321,6 +345,7 @@ input[data-error]::after {
 .close:after {
   transform: rotate(-45deg);
 }
+.modal-body .btn-close,
 .btn-submit,
 .btn-signup {
   background: #fe142f;

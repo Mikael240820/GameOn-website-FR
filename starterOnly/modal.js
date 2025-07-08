@@ -10,12 +10,12 @@ function editNav() {
 // DOM Elements
 const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
-const modalCloseBtn = document.querySelector("#modal-close-btn");
+const modalCloseBtn = document.querySelectorAll(".btn-close");
 const formData = document.querySelectorAll(".formData");
 
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
-modalCloseBtn && modalCloseBtn.addEventListener("click", closeModal);
+modalCloseBtn.forEach((btn) => btn.addEventListener("click", closeModal));
 
 // launch modal form
 function launchModal() {
@@ -83,9 +83,10 @@ function validate() {
     markError("cgu");
   }
 
-  if (errors.length > 0) {
-    return false;
+  if (errors.length === 0) {
+    document.querySelector("#reserve-form").classList.add("hide");
+    document.querySelector("#reserve-success").classList.remove("hide");
   }
 
-  return true;
+  return false;
 }
