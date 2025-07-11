@@ -88,6 +88,9 @@ img {
     display: block;
     text-align: left;
   }
+  .header-logo img {
+    max-width: 220px;
+  }
 }
 
 
