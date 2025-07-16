@@ -90,3 +90,11 @@ function validate() {
 
   return false;
 }
+
+function resetReservedForm() {
+  const form = document.querySelector('form[name="reserve"]');
+  form.reset();
+  
+  document.querySelector("#reserve-success").classList.add("hide");
+  document.querySelector("#reserve-form").classList.remove("hide");
+}
